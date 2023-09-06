@@ -2,7 +2,7 @@ const boton = document.getElementById("btnBuscar");
 const contenedor = document.getElementById("contenedor");
 
 boton.addEventListener("click", function () {
-  const planeta = document.getElementById("inputBuscar").value; // Mover esta línea aquí
+  const planeta = document.getElementById("inputBuscar").value; 
   
   const url = `https://images-api.nasa.gov/search?q=${planeta}`;
   
@@ -18,12 +18,12 @@ boton.addEventListener("click", function () {
 
 function mostrarDatos(data) {
   const items = data.collection.items;
-  contenedor.innerHTML = ""; // Limpiar el contenedor antes de agregar nuevas tarjetas
+  contenedor.innerHTML = ""; 
   
   items.forEach((item) => {
     const title = item.data[0].title;
     const description = item.data[0].desc;
-    const dateCreated = item.data[0].dateCreated; // Asumiendo que tienes esta propiedad en tu objeto 'data'
+    const dateCreated = item.data[0].dateCreated; 
     const imageUrl = item.links[0].href;
 
     const cardElement = document.createElement("div");
