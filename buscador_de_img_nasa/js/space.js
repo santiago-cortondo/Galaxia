@@ -1,5 +1,6 @@
 const buscar = document.getElementById("btnBuscar");
 const contenedor = document.getElementById("contenedor");
+contenedor.className = "card-container";
 
 buscar.addEventListener("click", () => {
   const planeta = document.getElementById("inputBuscar").value;
