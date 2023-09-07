@@ -1,10 +1,10 @@
-const searchButton = document.getElementById("btnBuscar");
-const resultContainer = document.getElementById("contenedor");
+const buscar = document.getElementById("btnBuscar");
+const contenedor = document.getElementById("contenedor");
 
-searchButton.addEventListener("click", () => {
-  const searchTerm = document.getElementById("inputBuscar").value;
+buscar.addEventListener("click", () => {
+  const planeta = document.getElementById("inputBuscar").value;
 
-  fetchNASAData(searchTerm)
+  fetchNASAData(planeta)
     .then((data) => {
       displayData(data);
     })
@@ -20,7 +20,7 @@ function fetchNASAData(searchTerm) {
 
 function displayData(data) {
   const items = data.collection.items;
-  resultContainer.innerHTML = "";
+  contenedor.innerHTML = "";
 
   items.forEach((item) => {
     const title = item.data[0].title;
@@ -29,7 +29,7 @@ function displayData(data) {
     const imageUrl = item.links[0].href;
 
     const cardElement = createCard(title, description, dateCreated, imageUrl);
-    resultContainer.appendChild(cardElement);
+    contenedor.appendChild(cardElement);
   });
 }
 
