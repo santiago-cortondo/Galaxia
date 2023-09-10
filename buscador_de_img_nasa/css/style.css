@@ -3,10 +3,10 @@ main {
   }
   .card-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que las cartas se envuelvan a la siguiente fila cuando no quepan en la pantalla. */
-    justify-content: space-between; /* Espaciado uniforme entre las cartas. Puedes ajustarlo según tus preferencias. */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
   }
   .col-lg-4 {
-    flex: 0 0 calc(33.333% - 1rem); /* Ajusta el ancho de las cartas para que quepan tres en una fila en pantallas grandes (cambiar según tus necesidades). */
-    margin-right: 1rem; /* Espaciado entre las cartas (puedes ajustarlo según tus preferencias). */
+    flex: 0 0 calc(33.333% - 1rem); 
+    margin-right: 1rem; 
   }
